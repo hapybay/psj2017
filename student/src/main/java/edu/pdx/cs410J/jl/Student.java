@@ -4,7 +4,9 @@ import edu.pdx.cs410J.lang.Human;
 
 import java.util.ArrayList;
                                                                                     
-/**                                                                                 
+/**
+ *
+ *
  * This class is represents a <code>Student</code>.                                 
  */                                                                                 
 public class Student extends Human {                                                
