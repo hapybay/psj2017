@@ -42,7 +42,21 @@ public class StudentTest
     Student pat = new Student(name, new ArrayList(), 0.0, "Doesn't matter");
 
     // then we expect that pat's getname will give us Pat
-    assertThat(pat.getName() + "ohno", equalTo(name));
+    assertThat(pat.getName() + "", equalTo(name));
   }
+
+  @Test
+  public void studentNamedPatIsNamedPatDummy2() {
+    // Tests should be TheGiven, TheWhen and TheThen.
+    //  Given a student named Pat
+    String name = "Pat";
+
+    // When we new a Student
+    Student pat = new Student(name, new ArrayList(), 0.0, "Doesn't matter");
+
+    // then we expect that pat's getname will give us Pat
+    assertThat(pat.getName() + "", equalTo(name));
+  }
+
 
 }
