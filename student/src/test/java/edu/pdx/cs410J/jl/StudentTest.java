@@ -1,5 +1,6 @@
 package edu.pdx.cs410J.jl;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -15,44 +16,24 @@ import static org.hamcrest.core.IsEqual.equalTo;
 public class StudentTest
 {
 
+    private Student getStudentNamed(String name) {
+        return new Student(name, new ArrayList(), 0.0, "Doesn't matter");
+    }
+
   @Test
   public void studentNamedPatIsNamedPat() {
     // Tests should be TheGiven, TheWhen and TheThen.
-    //  Given a student named Pat
-    String name = "Pat";
+      // TheGiven a student named Pat
+      // TheWhen we new a Student
 
-    // When we new a Student
-    Student pat = new Student(name, new ArrayList(), 0.0, "Doesn't matter");
-
-    // then we expect that pat's getname will give us Pat
-    assertThat(pat.getName(), equalTo(name));
+      // TheThen we expect that pat's getname will give us Pat
+      Student student = getStudentNamed("Pat");
+      assertThat(student.getName(), equalTo("Pat"));
   }
 
   @Test
-  public void studentNamedPatIsNamedPatDummy() {
-    // Tests should be TheGiven, TheWhen and TheThen.
-    //  Given a student named Pat
-    String name = "Pat";
-
-    // When we new a Student
-    Student pat = new Student(name, new ArrayList(), 0.0, "Doesn't matter");
-
-    // then we expect that pat's getname will give us Pat
-    assertThat(pat.getName() + "", equalTo(name));
+  public void studentSaysThisClassIsTooMuchWork() {
+      Student student = getStudentNamed("Name");
+      assertThat(student.says(), equalTo("This class is too much work"));
   }
-
-  @Test
-  public void studentNamedPatIsNamedPatDummy2() {
-    // Tests should be TheGiven, TheWhen and TheThen.
-    //  Given a student named Pat
-    String name = "Pat";
-
-    // When we new a Student
-    Student pat = new Student(name, new ArrayList(), 0.0, "Doesn't matter");
-
-    // then we expect that pat's getname will give us Pat
-    assertThat(pat.getName() + "", equalTo(name));
-  }
-
-
 }
