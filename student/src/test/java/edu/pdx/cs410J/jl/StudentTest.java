@@ -42,7 +42,7 @@ public class StudentTest
     Student pat = new Student(name, new ArrayList(), 0.0, "Doesn't matter");
 
     // then we expect that pat's getname will give us Pat
-    assertThat(pat.getName(), equalTo(name));
+    assertThat(pat.getName() + "ohno", equalTo(name));
   }
 
 }
